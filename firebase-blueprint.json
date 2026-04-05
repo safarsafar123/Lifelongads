@@ -1,0 +1,41 @@
+{
+  "entities": {
+    "blogs": {
+      "title": "Blog Posts",
+      "description": "Posts synced from LinkedIn or created manually.",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "description": "Title of the post" },
+        "content": { "type": "string", "description": "Full content of the post" },
+        "excerpt": { "type": "string", "description": "Short summary" },
+        "image": { "type": "string", "description": "URL of the featured image" },
+        "date": { "type": "string", "description": "ISO date string" },
+        "category": { "type": "string", "description": "Category of the post" },
+        "linkedinUrl": { "type": "string", "description": "Original LinkedIn post URL" }
+      },
+      "required": ["title", "content", "date"]
+    },
+    "featured_videos": {
+      "title": "Featured Videos",
+      "description": "Latest Reels or YouTube videos to be displayed on the home page.",
+      "type": "object",
+      "properties": {
+        "url": { "type": "string", "description": "Video URL (YouTube embed or direct link)" },
+        "type": { "type": "string", "description": "Type of video (youtube, instagram, mp4)", "enum": ["youtube", "instagram", "mp4"] },
+        "title": { "type": "string", "description": "Optional title" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["url", "type"]
+    }
+  },
+  "firestore": {
+    "blogs": {
+      "schema": "blogs",
+      "description": "Collection of blog posts"
+    },
+    "featured_videos": {
+      "schema": "featured_videos",
+      "description": "Collection of featured videos for home page"
+    }
+  }
+}
