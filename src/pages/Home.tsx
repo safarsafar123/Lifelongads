@@ -40,8 +40,8 @@ const Home = () => {
       } else {
         // Fallback to the user's provided video
         setVideos([{
-          url: "https://www.youtube.com/embed/6QO8nrIGwCE",
-          type: "youtube"
+          url: "https://www.instagram.com/reel/DWMT4nBDChg/?igsh=bHJ5NG8wOHowMmVx",
+          type: "instagram"
         }]);
       }
     }, (error) => {
