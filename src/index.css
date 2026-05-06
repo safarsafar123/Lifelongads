@@ -58,3 +58,18 @@
 .animate-scroll:hover {
   animation-play-state: running; /* Ensure it never stops even on hover */
 }
+/* Match placeholder color */
+input::placeholder,
+textarea::placeholder {
+  color: #a8a29e; /* your neutral stone */
+}
+
+/* Make select placeholder look same */
+select:invalid {
+  color: #a8a29e; /* same gray */
+}
+
+/* When user selects value → turn black */
+select:valid {
+  color: #0a0a0a; /* your primary */
+}
